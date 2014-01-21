@@ -1,4 +1,5 @@
 function initialize() {
+  $("#map-canvas").css({'height': $(window).height()/1.5});
 	var mapOptions = {
 		center: new google.maps.LatLng(43.861, 5.570),
 		zoom: 11,

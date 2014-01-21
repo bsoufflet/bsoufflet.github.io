@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
-    <title>Le mariage de Benjamin et Sophie</title>
+  <title>Le mariage de Benjamin et Sophie</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
+      <![endif]-->
 
-    <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans' rel='stylesheet' type='text/css'>
-    <script type="text/javascript"
+      <!-- Custom styles for this template -->
+      <link href="css/main.css" rel="stylesheet">
+      <link href="css/form.css" rel="stylesheet">
+      <link href='http://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans' rel='stylesheet' type='text/css'>
+      <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF64aqkxXRMCRenGzbaDijwCqOqBnryIc&sensor=true">
-    </script>
-    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-  </head>
+      </script>
+      <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+    </head>
 <!-- NAVBAR
-================================================== -->
+  ================================================== -->
   <body>
     <div class="navbar-wrapper">
       <div class="container">
@@ -50,6 +51,7 @@
                 <li><a href="#contact">Liste</a></li>
                 <li><a href="#hotels">Où dormir?</a></li>
                 <li><a href="#carte">Carte</a></li>
+                <li><a href="#carte">Nous contacter</a></li>
               </ul>
             </div>
           </div>
@@ -108,12 +110,13 @@
       <hr class="featurette-divider">
 
       <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <div class="col-md-8">
+          <h2 class="featurette-heading"><span class="glyphicon glyphicon-tree-deciduous"></span> Covoiturage <span class="text-muted">Un peu d'écologie ;)</span></h2>
+          <p class="lead">Nous avons créé un document partagé pour vous aider à limiter le nombre de voitures. Vous pouvez y annoncer votre trajet en tant que conducteur ou bien passager et préciser le nombre de places.</p>
+          <p class="lead">Le document est disponible ici : <a href="http://goo.gl/j900Om">http://goo.gl/j900Om</a>.</p>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="img/sauvan.jpg" alt="Chateau de Sauvan">
+        <div class="col-md-4">
+          <a href="http://goo.gl/j900Om"><img class="featurette-image img-responsive" src="img/covoiturage.png" alt="Google Drive" id="covoiturage-img"></a>
         </div>
       </div>
 
@@ -124,7 +127,7 @@
           <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
         <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <h2 class="featurette-heading"><span class="glyphicon glyphicon-gift"></span> Liste de mariage. <span class="text-muted">See for yourself.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
       </div>
@@ -133,7 +136,7 @@
       <hr class="featurette-divider">
 
       <div class="row" id="hotels">
-        <h1>Où dormir?</h1>
+        <h1><span class="glyphicon glyphicon-home"></span> Où dormir?</h1>
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
@@ -154,20 +157,154 @@
       <hr class="featurette-divider">
 
       <div class="row featurette">
-        <h1 id="carte">Carte</h1>
+        <h1 id="carte"><span class="glyphicon glyphicon-road"></span> Carte</h1>
         <div class="google-map-canvas" id="map-canvas"></div>
       </div>
 
-      <!-- /END THE FEATURETTES -->
 
 
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Benjamin et Sophie</p>
-      </footer>
 
-    </div><!-- /.container -->
+
+
+
+
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form role="form" class="form-horizontal" action="https://docs.google.com/forms/d/1lqoB3cTevVg9hA0GsPlF0kLJdje_f_kV-c8y8YsWnj8/formResponse" method="POST" id="ss-form" target="_blank" onsubmit="">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Confirmer ma présence au mariage</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="entry_1016456297" class="col-sm-4 control-label">Nom</label>
+                  <div class="col-sm-8">
+                    <input type="text" name="entry.1016456297" class="form-control" id="entry_1016456297" required="" placeholder="Nom">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_1443941312" class="col-sm-4 control-label">Prénom</label>
+                  <div class="col-sm-8">
+                    <input type="text" name="entry.14439413127" class="form-control" id="entry_1443941312" required="" placeholder="Prénom">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_1311052388" class="col-sm-4 control-label">Email</label>
+                  <div class="col-sm-8">
+                    <input type="email" name="entry.1311052388" class="form-control" id="entry_1311052388" required="" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_1294603181" class="col-sm-6 control-label">Nombre de personnes au total</label>
+                  <div class="col-sm-6">
+                    <input type="number" name="entry.1294603181" class="form-control" id="entry_1294603181" required="" placeholder="Nombre de personnes au total">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_2105641247" class="col-sm-4 control-label">Précisions</label>
+                  <div class="col-sm-8">
+                    <textarea name="entry.2105641247" rows="5" class="form-control" id="entry_2105641247" required="" placeholder="Des remarques, des précisions, c'est ici!"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_704394151" class="col-sm-4 control-label">Mairie</label>
+                  <div class="col-sm-8">
+                    <label class="checkbox-inline">
+                      <input type="radio" name="entry.370222538" value="Oui" id="group_370222538_1" required=""> Oui
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="entry.370222538" value="Non" id="group_370222538_2" required=""> Non
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_1065928741" class="col-sm-4 control-label">Eglise</label>
+                  <div class="col-sm-8">
+                    <label class="checkbox-inline">
+                      <input type="radio" name="entry.989894328" value="Oui" id="group_989894328_1" required=""> Oui
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="entry.989894328" value="Non" id="group_989894328_2" required=""> Non
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_96941238" class="col-sm-4 control-label">Vin d&#39;honneur</label>
+                  <div class="col-sm-8">
+                    <label class="checkbox-inline">
+                      <input type="radio" name="entry.1346619762" value="Oui" id="group_1346619762_1" required=""> Oui
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="entry.1346619762" value="Non" id="group_1346619762_2" required=""> Non
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_426671325" class="col-sm-4 control-label">Dîner</label>
+                  <div class="col-sm-8">
+                    <label class="checkbox-inline">
+                      <input type="radio" name="entry.2120262198" value="Oui" id="group_2120262198_1" required=""> Oui
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="entry.2120262198" value="Non" id="group_2120262198_2" required=""> Non
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_164328511" class="col-sm-4 control-label">Retinton / Rebond</label>
+                  <div class="col-sm-8">
+                    <label class="checkbox-inline">
+                      <input type="radio" name="entry.1253875553" value="Oui" id="group_1253875553_1" required=""> Oui
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="entry.1253875553" value="Non" id="group_1253875553_2" required=""> Non
+                    </label>
+                  </div>
+                </div>
+                <input type="hidden" name="draftResponse" value="[,,&quot;-4423430509679255989&quot;]
+                ">
+                <input type="hidden" name="pageHistory" value="0">
+                <input type="hidden" name="fbzx" value="-4423430509679255989">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+          <button type="submit" name="submit" id="ss-submit" class="btn btn-primary">Envoyer</button>
+        </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Confirmer ma présence
+</button>
+
+
+
+
+
+
+
+
+<div class="row featurette">
+  <h1 id="carte"><span class="glyphicon glyphicon-envelope"></span> Nous contacter</h1>
+  <p class="lead">Vous pouvez nous contacter par email :</p>
+
+  <p class="lead"><a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">soph...@gmail.com</a></p>
+  <p class="lead"><a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">bsou...@gmail.com</a></p>
+</div>
+
+<!-- /END THE FEATURETTES -->
+
+
+<!-- FOOTER -->
+<footer>
+  <p class="pull-right"><a href="#">Back to top</a></p>
+  <p>&copy; 2013 Benjamin et Sophie</p>
+</footer>
+
+</div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -176,4 +313,4 @@
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   </body>
-</html>
+  </html>

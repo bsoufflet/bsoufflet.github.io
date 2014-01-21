@@ -74,7 +74,7 @@ h1.letterpress {
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 40px 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -121,7 +121,7 @@ h1.letterpress {
 
 @media (min-width: 992px) {
   .featurette-heading {
-    margin-top: 120px;
+    margin-top: 60px;
   }
 }
 
@@ -139,4 +139,14 @@ h1.letterpress {
 
 #map-canvas {
   height:400px;
+}
+
+img.featurette-image {
+  border: 1px solid #DDDDDD;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+#covoiturage-img {
+  margin-top: 60px;
 }
