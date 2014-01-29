@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+  <link rel="shortcut icon" href="img/favicon.ico">
 
   <title>Le mariage de Benjamin et Sophie</title>
 
@@ -20,7 +20,6 @@
 
       <!-- Custom styles for this template -->
       <link href="css/main.css" rel="stylesheet">
-      <link href="css/form.css" rel="stylesheet">
       <link href='http://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans' rel='stylesheet' type='text/css'>
       <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF64aqkxXRMCRenGzbaDijwCqOqBnryIc&sensor=true">
@@ -30,7 +29,7 @@
     </head>
 <!-- NAVBAR
   ================================================== -->
-  <body>
+  <body data-spy="scroll" data-target=".navbar">
     <div class="navbar-wrapper">
       <div class="container">
 
@@ -46,12 +45,12 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Programme</a></li>
-                <li><a href="#contact">Covoiturage</a></li>
-                <li><a href="#contact">Liste</a></li>
+                <li class="active"><a href="#programme">Programme</a></li>
+                <li><a href="#covoiturage">Covoiturage</a></li>
+                <li><a href="#liste">Liste</a></li>
+                <li><a href="#contact">Confirmer ma présence</a></li>
                 <li><a href="#hotels">Où dormir?</a></li>
-                <li><a href="#carte">Carte</a></li>
-                <li><a href="#carte">Nous contacter</a></li>
+                <li><a href="#bottom">Carte</a></li>
               </ul>
             </div>
           </div>
@@ -80,27 +79,24 @@
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle img-responsive" src="img/saignon-eglise.jpg" alt="Chateau de Sauvan">
+      <div class="row" id="programme">
+        <div class="col-lg-4 col-md-4">
+          <img class="img-circle img-responsive center-block" src="img/saignon-eglise.jpg" alt="Chateau de Sauvan">
           <h2>Eglise de Saignon</h2>
-          <p><em>Place de l'Eglise 84400 Saignon</em></p>
           <p>Le mariage religieux aura lieu en l'Eglise romane Notre Dame de Saignon le 26 juillet 2014 à 16h.</p>
-          <p><a class="btn btn-default" href="#carte">Sur la carte &raquo;</a></p>
+          <p><a class="btn btn-success" href="#carte"><span class="glyphicon glyphicon-map-marker"></span> Place de l'Eglise 84400 Saignon &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle img-responsive" src="img/sauvan.jpg" alt="Chateau de Sauvan">
+        <div class="col-lg-4 col-md-4">
+          <img class="img-circle img-responsive center-block" src="img/sauvan.jpg" alt="Chateau de Sauvan">
           <h2>Chateau de Sauvan</h2>
-          <p><em>N100 04300 Mane</em></p>
           <p>Le vin d'honneur se tiendra au Chateau de Sauvan à Mane dans les Alpes de Haute Provence.</p>
-          <p><a class="btn btn-default" href="#carte">Sur la carte &raquo;</a></p>
+          <p><a class="btn btn-success" href="#carte"><span class="glyphicon glyphicon-map-marker"></span> N100 04300 Mane &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle img-responsive" src="img/piroublest.jpg" alt="Chateau de Sauvan">
+        <div class="col-lg-4 col-md-4">
+          <img class="img-circle img-responsive center-block" src="img/piroublest.jpg" alt="Chateau de Sauvan">
           <h2>Les Piroublets</h2>
-          <p><em>D223 84750 Castellet</em></p>
           <p>Nous vous invitons le lendemain à partager un brunch aux Piroublets.</p>
-          <p><a class="btn btn-default" href="#carte">Sur la carte &raquo;</a></p>
+          <p><a class="btn btn-success" href="#carte"><span class="glyphicon glyphicon-map-marker"></span> D223 84750 Castellet &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -109,26 +105,52 @@
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-8">
-          <h2 class="featurette-heading"><span class="glyphicon glyphicon-tree-deciduous"></span> Covoiturage <span class="text-muted">Un peu d'écologie ;)</span></h2>
+      <div class="row featurette" id="covoiturage">
+        <div class="col-md-6">
+          <h2 class="featurette-heading"><span class="glyphicon glyphicon-tree-deciduous"></span> Covoiturage <div class="text-muted">Un peu d'écologie ;)</div></h2>
           <p class="lead">Nous avons créé un document partagé pour vous aider à limiter le nombre de voitures. Vous pouvez y annoncer votre trajet en tant que conducteur ou bien passager et préciser le nombre de places.</p>
-          <p class="lead">Le document est disponible ici : <a href="http://goo.gl/j900Om">http://goo.gl/j900Om</a>.</p>
+          <p class="lead">Si vous venez en train, vous pouvez y indiquer votre gare et horaire d'arrivée et quelqu'un pourra peut etre vous récupérer!</p>
+          <a href="http://goo.gl/j900Om" class="btn btn-success btn-lg" target="_blank">Proposer un covoiturage</a>
         </div>
-        <div class="col-md-4">
-          <a href="http://goo.gl/j900Om"><img class="featurette-image img-responsive" src="img/covoiturage.png" alt="Google Drive" id="covoiturage-img"></a>
+        <div class="col-md-6">
+          <a href="http://goo.gl/j900Om" target="_blank"><img class="featurette-image img-responsive" src="img/covoiturage.png" alt="Google Drive" id="covoiturage-img"></a>
         </div>
       </div>
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
+      <div class="row featurette" id="liste">
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive" src="img/rsvp.jpg" alt="RSVP">
         </div>
         <div class="col-md-7">
           <h2 class="featurette-heading"><span class="glyphicon glyphicon-gift"></span> Liste de mariage. <span class="text-muted">See for yourself.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="contact">
+        <div class="col-md-6">
+          <h1 id="carte"><span class="glyphicon glyphicon-envelope"></span> Confirmer ma présence</h1>
+          <p class="lead text-muted">Vous pouvez nous confirmer votre présence à notre mariage en complétant le formulaire qui s'affichera après avoir cliqué sur le bouton ci-dessous.</p>
+          <br>
+          <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Je serai présent au mariage</button>
+          <br>
+          <br>
+          <h4>Vous pouvez également nous contacter par email :</h4>
+          <ul class="list-inline lead">
+            <li>
+              <a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">soph...@gmail.com</a>
+            </li>
+            <li>
+              <a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">bsou...@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <img class="featurette-image img-responsive" src="img/rsvp.jpg" alt="RSVP">
         </div>
       </div>
 
@@ -141,10 +163,12 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>Ville</th>
+                <th>Type</th>
                 <th>Nom</th>
-                <th>Prix (2 pers.)</th>
-                <th>Contact</th>
+                <th>Ville</th>
+                <th>Prix</th>
+                <th></th>
+                <th>Remarques</th>
                 <th></th>
               </tr>
             </thead>
@@ -154,13 +178,12 @@
         </div>
       </div>
 
-      <hr class="featurette-divider">
-
       <div class="row featurette">
         <h1 id="carte"><span class="glyphicon glyphicon-road"></span> Carte</h1>
-        <div class="google-map-canvas" id="map-canvas"></div>
+        
       </div>
-
+  </div><!-- /.container -->
+<div class="google-map-canvas" id="map-canvas"></div>
 
 
 
@@ -196,15 +219,21 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="entry_1294603181" class="col-sm-6 control-label">Nombre de personnes au total</label>
-                  <div class="col-sm-6">
-                    <input type="number" name="entry.1294603181" class="form-control" id="entry_1294603181" required="" placeholder="Nombre de personnes au total">
+                  <label for="entry_1294603181" class="col-sm-4 control-label">Nombre d'adultes</label>
+                  <div class="col-sm-2">
+                    <input type="number" name="entry.1294603181" class="form-control" id="entry_1294603181" required="" min="1" max="10" step="1" value="1">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_427312523" class="col-sm-4 control-label">Nombre d'enfants</label>
+                  <div class="col-sm-2">
+                    <input type="number" name="entry.427312523" class="form-control" id="entry_427312523" min="0" max="10" step="1" value="0">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="entry_2105641247" class="col-sm-4 control-label">Précisions</label>
                   <div class="col-sm-8">
-                    <textarea name="entry.2105641247" rows="5" class="form-control" id="entry_2105641247" required="" placeholder="Des remarques, des précisions, c'est ici!"></textarea>
+                    <textarea name="entry.2105641247" rows="5" class="form-control" id="entry_2105641247" required="" placeholder="Vous êtes végétariens, allergiques à un aliment, vous avez des remarques, des précisions, c'est ici!"></textarea>
                   </div>
                 </div>
                 <div class="form-group">
@@ -269,42 +298,26 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-          <button type="submit" name="submit" id="ss-submit" class="btn btn-primary">Envoyer</button>
+          <button type="submit" name="submit" id="ss-submit" class="btn btn-success">Envoyer</button>
         </div>
       </form>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Confirmer ma présence
-</button>
 
 
 
 
 
-
-
-
-<div class="row featurette">
-  <h1 id="carte"><span class="glyphicon glyphicon-envelope"></span> Nous contacter</h1>
-  <p class="lead">Vous pouvez nous contacter par email :</p>
-
-  <p class="lead"><a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">soph...@gmail.com</a></p>
-  <p class="lead"><a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">bsou...@gmail.com</a></p>
-</div>
 
 <!-- /END THE FEATURETTES -->
 
 
 <!-- FOOTER -->
 <footer>
-  <p class="pull-right"><a href="#">Back to top</a></p>
-  <p>&copy; 2013 Benjamin et Sophie</p>
+  <p class="text-center" id="bottom">&copy; 2014 Benjamin et Sophie</p>
 </footer>
-
-</div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
