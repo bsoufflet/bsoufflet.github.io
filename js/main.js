@@ -1,4 +1,4 @@
-var map, infowindow;
+var map, infowindow, churchMarker, sauvanMarker, retintonMarker;
 var markers = [];
 var infowindowContents = [];
 function initialize() {
@@ -31,12 +31,16 @@ function initialize() {
 	    // The anchor for this image is the base of the flagpole at 0,32.
 	    anchor: new google.maps.Point(0, 32)
     };
-  var churchMarker = new google.maps.Marker({
+  churchMarker = new google.maps.Marker({
       position: new google.maps.LatLng(43.86252, 5.43007),
       map: map,
       icon: churchIcon,
-      title: "Eglise",
+      title: "L'église de Saignon",
       zIndex: 150
+  });
+  google.maps.event.addListener(churchMarker, 'click', function() {
+    infowindow.setContent("L'église de Saignon");
+    infowindow.open(map, churchMarker);
   });
 
   var sauvanIcon = {
@@ -48,12 +52,16 @@ function initialize() {
     // The anchor for this image is the base of the flagpole at 0,32.
     anchor: new google.maps.Point(0, 32)
   };
-  var sauvanMarker = new google.maps.Marker({
+  sauvanMarker = new google.maps.Marker({
       position: new google.maps.LatLng(43.91984, 5.75919),
       map: map,
       icon: sauvanIcon,
-      title: "Sauvan",
+      title: "Le château de Sauvan",
       zIndex: 150
+  });
+  google.maps.event.addListener(sauvanMarker, 'click', function() {
+    infowindow.setContent("Le château de Sauvan");
+    infowindow.open(map, sauvanMarker);
   });
 
   var retintonIcon = {
@@ -65,12 +73,16 @@ function initialize() {
     // The anchor for this image is the base of the flagpole at 0,32.
     anchor: new google.maps.Point(0, 32)
   };
-  var retintonMarker = new google.maps.Marker({
+  retintonMarker = new google.maps.Marker({
       position: new google.maps.LatLng(43.84469, 5.50569),
       map: map,
       icon: retintonIcon,
-      title: "Piroublets",
+      title: "Les Piroublets",
       zIndex: 150
+  });
+  google.maps.event.addListener(retintonMarker, 'click', function() {
+    infowindow.setContent("Les Piroublets");
+    infowindow.open(map, retintonMarker);
   });
 
   populateHebergement();
@@ -100,13 +112,14 @@ function populateHebergement() {
           var nom = rows[i][1];
           var ville = rows[i][2];
           var prix = rows[i][3];
-          var contact = '<a href="' + rows[i][6] + '" class="btn btn-success btn-xs" target="_blank">Site web</a>';
+          var contact = '<a href="' + rows[i][6] + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-link"></span> Site web</a>';
           var remarque = rows[i][7];
-          var carte = '<button type="button" class="btn btn-success btn-xs" onclick="clickMarker('+i+')"><span class="glyphicon glyphicon-map-marker"></span> Voir sur la carte</button>'
+          var carte = '<button type="button" class="btn btn-success btn-xs" onclick="clickMarker('+i+')"><span class="glyphicon glyphicon-globe"></span> Sur la carte</button>'
           tbody.append( '<tr id="hebergement_' + i + '"><td>' + type + '</td><td>' + nom + '</td><td>' + ville + '</td><td>' + prix + '</td><td>' + contact + '</td><td>' + remarque + '</td><td>' + carte + '</td></tr>' );
-          var infowindowContent = "<div><b>"+nom+"</b><br><b>type:</b> "+type+"<br><b>prix:</b> "+prix+"<br><b>remarque:</b> "+remarque+"<br>"+contact+"</div>";
+          var infowindowContent = '<div class="infowindow"><b>'+nom+"</b><br><b>type:</b> "+type+"<br><b>prix:</b> "+prix+"<br><b>remarque:</b> "+remarque+"<br>"+contact+"</div>";
           addMarker(i, rows[i][4], rows[i][5], infowindowContent);
         }
+        toggleHebergementRows(false);
       }
     });
 }
@@ -128,4 +141,20 @@ function addMarker(i, lat, lng, infowindowContent) {
 function clickMarker(i) {
   location.hash = "#bottom";
   google.maps.event.trigger(markers[i], 'click');
+}
+
+function toggleHebergementRows(show) {
+  var i = 0;
+  $("#hotels table tr").each(function(){
+    i++;
+    if (i > 10) {
+      if (show) {
+        $(this).show();
+        $("#btnPlusHebergements").hide();
+      } else {
+        $(this).hide();
+      }
+    }
+  });
+
 }

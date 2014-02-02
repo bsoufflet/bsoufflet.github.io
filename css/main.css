@@ -8,6 +8,12 @@ body {
   background-repeat:repeat;
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+     body {
+          background-image: url(../img/ricepaper2_@2X.png);
+     }
+}
+
 
 
 /* CUSTOMIZE THE NAVBAR
@@ -18,30 +24,49 @@ body {
   position: relative;
   z-index: 15;
 }
+.navbar-brand {
+  font-weight: bold;
+}
 
 
 /* CUSTOMIZE THE TOP
 -------------------------------------------------- */
 
 .jumbotron {
-    background: url("../img/background-flowers-1.jpg") no-repeat center bottom fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+@media screen and (min-width: 1201px) {
+  .jumbotron {
+    background: url("../img/maps/majorApt1600.jpg") no-repeat center top fixed; 
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+  .jumbotron {
+    background: url("../img/maps/majorApt1200.jpg") no-repeat center top fixed; 
+  }
+}
+@media screen and (max-width: 800px) {
+  .jumbotron {
+    background: url("../img/maps/majorApt800.jpg") no-repeat center top fixed; 
+  }
+}
 
 .jumbotron p.lead {
-    color: #FFE4E1;
-    text-shadow: 0 1px 2px #FFFFFF;
+    color: #5CB85C;
+    #text-shadow: 0 1px 2px grey;
+    text-shadow: 1px 2px 3px #000000;
     font: 800 48px/0.8 'Great Vibes',Helvetica,sans-serif;
-    opacity: 0.75;
+    opacity: 0.9;
 }
 
 h1.letterpress {
-  color: #FFE4E1;
-  text-shadow: 0 1px 2px #FFFFFF;
-  opacity: 0.75;
+  color: #5CB85C;
+  #text-shadow: 0 1px 2px grey;
+  text-shadow: 1px 2px 3px #000000;
+  opacity: 0.9;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -118,12 +143,6 @@ h1.letterpress {
 
 }
 
-@media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 60px;
-  }
-}
-
 /* Fix Google Maps canvas
  *
  * Wrap your Google Maps embed in a `.google-map-canvas` to reset Bootstrap's
@@ -148,4 +167,10 @@ img.featurette-image {
 
 #covoiturage-img {
   margin-top: 60px;
+}
+/* Fix scrollbar on Firefox */
+div.infowindow {
+  line-height:1.35;
+  overflow:hidden;
+  white-space:nowrap;
 }
