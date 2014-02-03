@@ -93,7 +93,7 @@
         <div class="col-lg-4 col-md-4">
           <img class="img-circle img-responsive center-block" src="img/piroublest.jpg" alt="Chateau de Sauvan">
           <h2>Les Piroublets</h2>
-          <p>Nous vous invitons le lendemain à partager un brunch aux Piroublets.</p>
+          <p>Nous vous invitons le lendemain à partager un brunch aux Piroublets à partir de 12h.</p>
           <p><a class="btn btn-success" href="#bottom" onclick="google.maps.event.trigger(retintonMarker, 'click');"><span class="glyphicon glyphicon-map-marker"></span> D223 84750 Castellet &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
@@ -107,22 +107,29 @@
         <div class="col-md-6 col-sm-12 col-xs-12">
           <h2 class="featurette-heading"><span class="glyphicon glyphicon-envelope"></span> Confirmer ma présence</h2>
           <p class="lead text-muted">Vous pouvez nous confirmer votre présence à notre mariage en complétant le formulaire qui s'affichera après avoir cliqué sur le bouton ci-dessous.</p>
-          <br>
-          <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Je serai présent au mariage</button>
-          <br>
-          <br>
-          <h4>Vous pouvez également nous contacter par email :</h4>
-          <ul class="list-inline lead">
-            <li>
-              <a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">soph...@gmail.com</a>
-            </li>
-            <li>
-              <a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">bsou...@gmail.com</a>
-            </li>
-          </ul>
+          <div class="row" style="padding-top:15px;">
+            <div class="btn-toolbar">
+              <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#modalPresent">Je serai présent au mariage</button>
+              <button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modalAbsent">Je ne pourrai pas être présent</button>
+            </div>
+          </div>
+          <div class="row" style="padding-top:15px;">
+            <div class="alert alert-success" style="display:none;" id="formResponse">Merci pour votre message :)</div>
+          </div>
+          <div class="row" style="padding-top:15px;">
+            <h4>Vous pouvez également nous contacter par email :</h4>
+            <ul class="lead">
+              <li>
+                <a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">soph...@gmail.com</a>
+              </li>
+              <li>
+                <a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">bsou...@gmail.com</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="col-md-6 hidden-sm hidden-xs">
-          <img class="featurette-image img-responsive" src="img/maps/majorSauvan.jpg" alt="RSVP">
+          <img class="featurette-image img-responsive" src="img/maps/majorSauvan.jpg">
         </div>
       </div>
 
@@ -218,17 +225,13 @@
 
 
 
-
-
-
-
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade" id="modalAbsent" tabindex="-1" role="dialog" aria-labelledby="modalAbsentLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form role="form" class="form-horizontal" action="https://docs.google.com/forms/d/1lqoB3cTevVg9hA0GsPlF0kLJdje_f_kV-c8y8YsWnj8/formResponse" method="POST" id="ss-form" target="_blank" onsubmit="">
+            <form role="form" class="form-horizontal" action="https://docs.google.com/forms/d/1lqoB3cTevVg9hA0GsPlF0kLJdje_f_kV-c8y8YsWnj8/formResponse" method="POST" id="ss-form" target="_blank" onsubmit="$('#modalAbsent').modal('hide');$('#formResponse').show();">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Confirmer ma présence au mariage</h4>
+                <h4 class="modal-title" id="modalAbsentLabel">Je ne serai pas présent au mariage</h4>
               </div>
               <div class="modal-body">
                 <div class="form-group">
@@ -240,7 +243,65 @@
                 <div class="form-group">
                   <label for="entry_1443941312" class="col-sm-4 control-label">Prénom</label>
                   <div class="col-sm-8">
-                    <input type="text" name="entry.14439413127" class="form-control" id="entry_1443941312" required="" placeholder="Prénom">
+                    <input type="text" name="entry.1443941312" class="form-control" id="entry_1443941312" required="" placeholder="Prénom">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_1311052388" class="col-sm-4 control-label">Email</label>
+                  <div class="col-sm-8">
+                    <input type="email" name="entry.1311052388" class="form-control" id="entry_1311052388" required="" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_2105641247" class="col-sm-4 control-label">Message</label>
+                  <div class="col-sm-8">
+                    <textarea name="entry.2105641247" rows="5" class="form-control" id="entry_2105641247" required="" placeholder="Vous pouvez nous laisser un message si vous le souhaitez :)"></textarea>
+                  </div>
+                </div>
+                <input type="hidden" name="entry.1294603181" id="entry_1294603181" value="0"><!-- Nb adultes -->
+                <input type="hidden" name="entry.427312523" id="entry_427312523" value="0"><!-- Nb adultes -->
+                <input type="hidden" name="entry.989894328" value="Non" id="group_989894328_2"><!-- Eglise -->
+                <input type="hidden" name="entry.1346619762" value="Non" id="group_1346619762_2"><!-- Vin d'honneur -->
+                <input type="hidden" name="entry.2120262198" value="Non" id="group_2120262198_2"><!-- Diner -->
+                <input type="hidden" name="entry.1253875553" value="Non" id="group_1253875553_2"><!-- Brunch -->
+
+
+                
+                <input type="hidden" name="draftResponse" value="[,,&quot;-4423430509679255989&quot;]
+                ">
+                <input type="hidden" name="pageHistory" value="0">
+                <input type="hidden" name="fbzx" value="-4423430509679255989">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                <button type="submit" name="submit" id="ss-submit" class="btn btn-warning">Je ne serai pas présent</button>
+              </div>
+            </form>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
+
+      <div class="modal fade" id="modalPresent" tabindex="-1" role="dialog" aria-labelledby="modalPresentLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form role="form" class="form-horizontal" action="https://docs.google.com/forms/d/1lqoB3cTevVg9hA0GsPlF0kLJdje_f_kV-c8y8YsWnj8/formResponse" method="POST" id="ss-form" target="_blank" onsubmit="$('#modalPresent').modal('hide');$('#formResponse').show();">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modalPresentLabel">Confirmer ma présence au mariage</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="entry_1016456297" class="col-sm-4 control-label">Nom</label>
+                  <div class="col-sm-8">
+                    <input type="text" name="entry.1016456297" class="form-control" id="entry_1016456297" required="" placeholder="Nom">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entry_1443941312" class="col-sm-4 control-label">Prénom</label>
+                  <div class="col-sm-8">
+                    <input type="text" name="entry.1443941312" class="form-control" id="entry_1443941312" required="" placeholder="Prénom">
                   </div>
                 </div>
                 <div class="form-group">
@@ -265,17 +326,6 @@
                   <label for="entry_2105641247" class="col-sm-4 control-label">Précisions</label>
                   <div class="col-sm-8">
                     <textarea name="entry.2105641247" rows="5" class="form-control" id="entry_2105641247" required="" placeholder="Vous êtes végétariens, allergiques à un aliment, vous avez des remarques, des précisions, c'est ici!"></textarea>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="entry_704394151" class="col-sm-4 control-label">Mairie</label>
-                  <div class="col-sm-8">
-                    <label class="checkbox-inline">
-                      <input type="radio" name="entry.370222538" value="Oui" id="group_370222538_1" required=""> Oui
-                    </label>
-                    <label class="checkbox-inline">
-                      <input type="radio" name="entry.370222538" value="Non" id="group_370222538_2" required=""> Non
-                    </label>
                   </div>
                 </div>
                 <div class="form-group">
@@ -309,10 +359,11 @@
                     <label class="checkbox-inline">
                       <input type="radio" name="entry.2120262198" value="Non" id="group_2120262198_2" required=""> Non
                     </label>
+                    <label class="checkbox-inline"><em>(sur invitation)</em></label>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="entry_164328511" class="col-sm-4 control-label">Retinton / Rebond</label>
+                  <label for="entry_164328511" class="col-sm-4 control-label">Brunch</label>
                   <div class="col-sm-8">
                     <label class="checkbox-inline">
                       <input type="radio" name="entry.1253875553" value="Oui" id="group_1253875553_1" required=""> Oui
@@ -320,21 +371,22 @@
                     <label class="checkbox-inline">
                       <input type="radio" name="entry.1253875553" value="Non" id="group_1253875553_2" required=""> Non
                     </label>
+                    <label class="checkbox-inline"><em>(sur invitation)</em></label>
                   </div>
                 </div>
                 <input type="hidden" name="draftResponse" value="[,,&quot;-4423430509679255989&quot;]
                 ">
                 <input type="hidden" name="pageHistory" value="0">
                 <input type="hidden" name="fbzx" value="-4423430509679255989">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-          <button type="submit" name="submit" id="ss-submit" class="btn btn-success">Envoyer</button>
-        </div>
-      </form>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                <button type="submit" name="submit" id="ss-submit" class="btn btn-success">Confirmer ma présence</button>
+              </div>
+            </form>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
 
 
 
