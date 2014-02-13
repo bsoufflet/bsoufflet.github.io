@@ -86,12 +86,16 @@ function initialize() {
   });
 
   populateHebergement();
+
+  google.maps.event.addListener(map, "click", function(event) {
+    infowindow.close();
+  });
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
 function populateHebergement() {
 	var query = "SELECT * FROM " +
-        '1TYmLwnVY0MEBO1To19JRuNJmuFHnUl4IM_-keUE ORDER BY Ville';
+        '1TYmLwnVY0MEBO1To19JRuNJmuFHnUl4IM_-keUE ORDER BY Prix';
     var encodedQuery = encodeURIComponent(query);
 
     // Construct the URL
@@ -111,26 +115,26 @@ function populateHebergement() {
           var type = rows[i][0];
           var nom = rows[i][1];
           var ville = rows[i][2];
-          var prix = rows[i][3];
+          var prix = "&euro; " + rows[i][3];
           var contact = '<a href="' + rows[i][6] + '" class="btn btn-success btn-xs" target="_blank"><span class="glyphicon glyphicon-link"></span> Site web</a>';
           var remarque = rows[i][7];
           var carte = '<button type="button" class="btn btn-success btn-xs" onclick="clickMarker('+i+')"><span class="glyphicon glyphicon-globe"></span> Sur la carte</button>'
           tbody.append( '<tr id="hebergement_' + i + '"><td>' + type + '</td><td>' + nom + '</td><td>' + ville + '</td><td>' + prix + '</td><td>' + contact + '</td><td>' + remarque + '</td><td>' + carte + '</td></tr>' );
           var infowindowContent = '<div class="infowindow"><b>'+nom+"</b><br><b>type:</b> "+type+"<br><b>prix:</b> "+prix+"<br><b>remarque:</b> "+remarque+"<br>"+contact+"</div>";
-          addMarker(i, rows[i][4], rows[i][5], infowindowContent);
+          addMarker(i, rows[i][4], rows[i][5], infowindowContent, nom);
         }
         toggleHebergementRows(false);
       }
     });
 }
 
-function addMarker(i, lat, lng, infowindowContent) {
+function addMarker(i, lat, lng, infowindowContent, title) {
   infowindowContents[i] = infowindowContent;
   var myLatlng = new google.maps.LatLng(lat, lng);
   markers[i] = new google.maps.Marker({
     position: myLatlng,
     map: map,
-    title: 'Hello World!'
+    title: title
   });
   google.maps.event.addListener(markers[i], 'click', function() {
     infowindow.setContent(infowindowContents[i]);
