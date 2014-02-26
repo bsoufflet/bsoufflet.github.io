@@ -37,15 +37,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Sophie & Benjamin</a>
+              <a class="navbar-brand hidden-md" href="#">Sophie & Benjamin</a>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#programme">Programme</a></li>
-                <li><a href="#contact">Confirmer ma présence</a></li>
+                <li><a href="#confirm">Confirmer ma présence</a></li>
                 <li><a href="#covoiturage">Covoiturage</a></li>
                 <li><a href="#liste">Liste</a></li>
                 <li><a href="#faq">Astuces</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="#hotels">Où dormir?</a></li>
                 <li><a href="#bottom">Carte</a></li>
               </ul>
@@ -103,10 +104,10 @@
 
       <hr class="featurette-divider">
 
-      <div class="row featurette" id="contact">
+      <div class="row featurette" id="confirm">
         <div class="col-md-6 col-sm-12 col-xs-12">
-          <h2 class="featurette-heading"><span class="glyphicon glyphicon-envelope"></span> Confirmer ma présence</h2>
-          <p class="lead">Vous pouvez nous confirmer votre présence en complétant le formulaire qui s'affichera après avoir cliqué sur le bouton ci-dessous.</p>
+          <h2 class="featurette-heading"><span class="glyphicon glyphicon-pencil"></span> Confirmer ma présence</h2>
+          <p class="lead" style="margin-top:25px;">Vous pouvez nous confirmer votre présence en complétant le formulaire qui s'affichera après avoir cliqué sur le bouton ci-dessous.</p>
           <div class="row">
             <div class="btn-toolbar" style="text-align: center;">
               <div class="col-md-6 col-sm-12 col-xs-12" style="padding-top:15px;">
@@ -120,20 +121,9 @@
           <div class="row" style="padding-top:15px;">
             <div class="alert alert-success" style="display:none;" id="formResponse">Merci pour votre message :)</div>
           </div>
-          <div class="row" style="padding-top:15px;">
-            <h4>Vous pouvez également nous contacter par email :</h4>
-            <ul class="lead">
-              <li>
-                <a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">soph...@gmail.com</a>
-              </li>
-              <li>
-                <a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">bsou...@gmail.com</a>
-              </li>
-            </ul>
-          </div>
         </div>
         <div class="col-md-6 hidden-sm hidden-xs">
-          <img class="featurette-image img-responsive" src="img/maps/majorSauvan.jpg">
+          <img class="featurette-image img-responsive" src="img/maps/CassiniSaignon.jpg">
         </div>
       </div>
 
@@ -178,29 +168,24 @@
       <hr class="featurette-divider">
 
       <div class="row featurette" id="faq">
-        <div class="col-md-6 hidden-sm hidden-xs">
-          <img class="featurette-image img-responsive" src="img/maps/CassiniSaignon.jpg" alt="RSVP">
-        </div>
-        <div class="col-md-6 col-sm-12 col-xs-12">
-          <h2 class="featurette-heading"><span class="glyphicon glyphicon-question-sign"></span> Infos et astuces !</h2>
+      <h2 class="featurette-heading"><span class="glyphicon glyphicon-question-sign"></span> Infos et astuces !</h2>
+        <div class="col-md-6">
           <h3>Code vestimentaire</h3>
-          <p>
+          <p class="lead">
             Pas de thème ni de couleur obligatoire. La robe blanche est bien sûr réservée à la mariée (je dis ça pour les novices du mariage !). Les baskets et jean's troués seront les bienvenus le lendemain.
           </p>
           <h3>Aliments spéciaux ?</h3>
-          <p>
+          <p class="lead">
             Vous êtes allergiques à certains ingrédients ? Vous êtes végétariens ? Merci de nous le dire à l'avance pour que nous en informions le traiteur qui pourra adapter un menu spécifique.
           </p>
+        </div>
+        <div class="col-md-6">
           <h3>Animations</h3>
-          <p>
+          <p class="lead">
             Vous voulez faire une animation pendant le repas mais vous ne savez pas quand passer ? Pas de soucis, nous vous invitons à contacter nos témoins ou à vous rapprocher de l'animateur pour trouver le moment le plus adapté !
           </p>
           <h3>Se garer</h3>
-          <p>
-            Section à venir...
-          </p>
-          <h3>Pour les enfants</h3>
-          <p>
+          <p class="lead">
             Section à venir...
           </p>
         </div>
@@ -208,8 +193,48 @@
 
       <hr class="featurette-divider">
 
+      <div class="row featurette" id="contact">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+          <h2 class="featurette-heading"><span class="glyphicon glyphicon-envelope"></span> Contact</h2>
+          <h3>Nous</h3>
+          <p>
+            <ul class="lead">
+              <li>Sophie Amic - <a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75vierL6Y32QQ5gBaTjL26M4bCybVh7goajWbciTFRnJI\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Révéler cette adresse e-mail"><span class="glyphicon glyphicon-envelope"></span></a> - 06&nbsp;63&nbsp;70&nbsp;95&nbsp;32</li>
+              <li>Benjamin&nbsp;Soufflet - <a href="http://www.google.com/recaptcha/mailhide/d?k=01QPNUUfnanjdY0fBAFndR6Q==&amp;c=-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501QPNUUfnanjdY0fBAFndR6Q\75\75\46c\75-VaShRCjcRstFfj70Xg8jil522w6QMlJCBdOog7XxSE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Révéler cette adresse e-mail"><span class="glyphicon glyphicon-envelope"></a> - 06&nbsp;18&nbsp;93&nbsp;08&nbsp;38</li>
+            </ul>
+          </p>
+          <h3>Nos parents</h3>
+          <p>
+            <ul class="lead">
+              <li>Maria & Philippe Amic - <a href="http://www.google.com/recaptcha/mailhide/d?k=01HooCgNPpvBAyYaeD8xeYBQ==&amp;c=RzVclGi0z8scb8EUf0w9RpvLSr7wpg-u3v4eFDStfC8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501HooCgNPpvBAyYaeD8xeYBQ\75\75\46c\75RzVclGi0z8scb8EUf0w9RpvLSr7wpg-u3v4eFDStfC8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Révéler cette adresse e-mail"><span class="glyphicon glyphicon-envelope"></a> - 04&nbsp;90&nbsp;92&nbsp;96&nbsp;42</li>
+              <li>Bernadette & Rémy Soufflet - <a href="http://www.google.com/recaptcha/mailhide/d?k=01HooCgNPpvBAyYaeD8xeYBQ==&amp;c=vb21T4sFyDSJuOyjTLAF0lHcgWIQrZURIV1Zb0slSUs=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501HooCgNPpvBAyYaeD8xeYBQ\75\75\46c\75vb21T4sFyDSJuOyjTLAF0lHcgWIQrZURIV1Zb0slSUs\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Révéler cette adresse e-mail"><span class="glyphicon glyphicon-envelope"></a> - 05&nbsp;94&nbsp;27&nbsp;38&nbsp;82</li>
+            </ul>
+          </p>
+          <h3>Témoins de Sophie</h3>
+          <p>
+            <ul class="lead">
+              <li>Charlotte&nbsp;Amic - <a href="http://www.google.com/recaptcha/mailhide/d?k=01HooCgNPpvBAyYaeD8xeYBQ==&amp;c=DtraPlXQ-Ui4mEzJz-mNAXrD45Bn5n63LmjRA-mICJw=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501HooCgNPpvBAyYaeD8xeYBQ\75\75\46c\75DtraPlXQ-Ui4mEzJz-mNAXrD45Bn5n63LmjRA-mICJw\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Révéler cette adresse e-mail"><span class="glyphicon glyphicon-envelope"></a> - 06&nbsp;32&nbsp;59&nbsp;23&nbsp;02</li>
+              <li>Jeanne&nbsp;Bernal - <a href="http://www.google.com/recaptcha/mailhide/d?k=01HooCgNPpvBAyYaeD8xeYBQ==&amp;c=F9cWzUl5g_5hscsAdCTai4NDjn_bha3-xKe7nL4KnAg=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501HooCgNPpvBAyYaeD8xeYBQ\75\75\46c\75F9cWzUl5g_5hscsAdCTai4NDjn_bha3-xKe7nL4KnAg\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Révéler cette adresse e-mail"><span class="glyphicon glyphicon-envelope"></a> - 06&nbsp;83&nbsp;59&nbsp;14&nbsp;58</li>
+            </ul>
+          </p>
+          <h3>Témoins de Benjamin</h3>
+          <p>
+            <ul class="lead">
+              <li>Tiphaine&nbsp;Krouch - <a href="http://www.google.com/recaptcha/mailhide/d?k=01HooCgNPpvBAyYaeD8xeYBQ==&amp;c=NWrVv3WbmM5TBgmYLtOXTFmM0K0N866QM2shgyMC_rE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501HooCgNPpvBAyYaeD8xeYBQ\75\75\46c\75NWrVv3WbmM5TBgmYLtOXTFmM0K0N866QM2shgyMC_rE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Révéler cette adresse e-mail"><span class="glyphicon glyphicon-envelope"></a> - 06&nbsp;14&nbsp;86&nbsp;21&nbsp;72</li>
+              <li>Maxime&nbsp;Soufflet - <a href="http://www.google.com/recaptcha/mailhide/d?k=01HooCgNPpvBAyYaeD8xeYBQ==&amp;c=JLGv8gMRcHyeBxkdRKneS9vwqOMzPTafCmz6dVRruk0=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501HooCgNPpvBAyYaeD8xeYBQ\75\75\46c\75JLGv8gMRcHyeBxkdRKneS9vwqOMzPTafCmz6dVRruk0\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Révéler cette adresse e-mail"><span class="glyphicon glyphicon-envelope"></a> - 06&nbsp;21&nbsp;98&nbsp;87&nbsp;89</li>
+              <li>Samuel&nbsp;Soufflet - <a href="http://www.google.com/recaptcha/mailhide/d?k=01HooCgNPpvBAyYaeD8xeYBQ==&amp;c=TkJkn5XNIZbDS6O0l81ys6Fw8nFV_Ut-tB2umkIVAhY=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501HooCgNPpvBAyYaeD8xeYBQ\75\75\46c\75TkJkn5XNIZbDS6O0l81ys6Fw8nFV_Ut-tB2umkIVAhY\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Révéler cette adresse e-mail"><span class="glyphicon glyphicon-envelope"></a> - 06&nbsp;60&nbsp;58&nbsp;58&nbsp;68</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-md-6 hidden-sm hidden-xs">
+          <img class="featurette-image img-responsive" src="img/maps/majorSaignonVertical.jpg">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
       <div class="row" id="hotels">
-        <h1><span class="glyphicon glyphicon-home"></span> Où dormir ?</h1>
+        <h2 class="featurette-heading"><span class="glyphicon glyphicon-home"></span> Où dormir ?</h2>
         <div class="col-md-12 col-sm-12 col-xs-12">
           <p class="lead">Voici une liste non exhaustive d'hébergements aux alentours du mariage. Tous sont également visibles sur <a href="#carte">la carte</a>. Si un hébergement est complet, vous pouvez nous contacter pour que nous le supprimions de la liste.</p>
           <p class="lead">Le prix affiché est pour 1 nuit et 2 personnes.</p>
@@ -237,7 +262,7 @@
       <hr class="featurette-divider">
 
       <div class="row featurette">
-        <h1 id="carte"><span class="glyphicon glyphicon-road"></span> Carte</h1>
+        <h2 class="featurette-heading" id="carte"><span class="glyphicon glyphicon-road"></span> Carte</h2>
         
       </div>
   </div><!-- /.container -->

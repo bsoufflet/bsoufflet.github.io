@@ -39,7 +39,10 @@ function initialize() {
       zIndex: 150
   });
   google.maps.event.addListener(churchMarker, 'click', function() {
-    infowindow.setContent("L'église de Saignon");
+    var content = '<div class="infowindow">L\'église de Saignon<br><a href="https://maps.google.com/maps?q=';
+    content += this.position.lat() + "," + this.position.lng() +"+(Eglise)";
+    content += "&z=14&ll=" + this.position.lat() + "," + this.position.lng() + '" target="_blank">Google Maps</a></div>';
+    infowindow.setContent(content);
     infowindow.open(map, churchMarker);
   });
 
@@ -60,7 +63,10 @@ function initialize() {
       zIndex: 150
   });
   google.maps.event.addListener(sauvanMarker, 'click', function() {
-    infowindow.setContent("Le château de Sauvan");
+    var content = '<div class="infowindow">Le château de Sauvan<br><a href="https://maps.google.com/maps?q=';
+    content += this.position.lat() + "," + this.position.lng() +"+(Sauvan)";
+    content += "&z=14&ll=" + this.position.lat() + "," + this.position.lng() + '" target="_blank">Google Maps</a></div>';
+    infowindow.setContent(content);
     infowindow.open(map, sauvanMarker);
   });
 
@@ -81,7 +87,10 @@ function initialize() {
       zIndex: 150
   });
   google.maps.event.addListener(retintonMarker, 'click', function() {
-    infowindow.setContent("Les Piroublets");
+    var content = '<div class="infowindow">Les Piroublets<br><a href="https://maps.google.com/maps?q=';
+    content += this.position.lat() + "," + this.position.lng() +"+(Piroublets)";
+    content += "&z=14&ll=" + this.position.lat() + "," + this.position.lng() + '" target="_blank">Google Maps</a></div>';
+    infowindow.setContent(content);
     infowindow.open(map, retintonMarker);
   });
 
